@@ -59,13 +59,6 @@ const Register = ({ navigation }) => {
               },
             ]}
           >
-            {/* <Pressable
-              style={{
-                transform: [{ translateY: 75 }, { translateX: 10 }],
-              }}
-            >
-              <Ionicons name="add-circle-outline" size={13} color="#FF6C00" />
-            </Pressable> */}
             <Pressable
               style={styles.addButton}
               onPress={() => {

@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  FlatList,
   Pressable,
   TextInput,
   KeyboardAvoidingView,
@@ -23,7 +22,6 @@ const CommentsScreen = ({ route }) => {
   };
   return (
     <ScrollView
-      // nestedScrollEnabled={true}
       style={{
         flex: 1,
         backgroundColor: "#FFFFFF",
@@ -32,13 +30,6 @@ const CommentsScreen = ({ route }) => {
       }}
     >
       <Text style={postLabel}>{title}</Text>
-      {/* <FlatList
-        data={posts}
-        renderItem={({ item }) => (
-          <PostItemSimple data={item} navigation={navigation} />
-        )}
-        keyExtractor={(item) => item.id}
-      /> */}
       <KeyboardAvoidingView
         behavior={Platform.OS == "ios" ? "padding" : "height"}
       >
