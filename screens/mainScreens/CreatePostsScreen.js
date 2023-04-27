@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Camera } from "expo-camera";
 import * as Location from "expo-location";
+import { nanoid } from "nanoid";
 
 import {
   TouchableWithoutFeedback,
@@ -24,6 +25,8 @@ const CreatePostsScreen = ({ navigation }) => {
   const [postLocationGPS, setPostLocationGPS] = useState(null);
   const [photo, setPhoto] = useState("");
   const [isKeyboardShow, setIsKeyboardShow] = useState(false);
+
+  const postId = nanoid();
 
   const postNameHandler = (text) => setPostName(text.trim());
   const postLocationHandler = (text) => setPostLocation(text.trim());
@@ -77,7 +80,7 @@ const CreatePostsScreen = ({ navigation }) => {
     console.log("SENDING NEW POST =====>", postLocation);
     console.log("postLocationGPS", postLocationGPS);
     const newPost = {
-      id: 2888,
+      id: postId,
       title: postName,
       image: photo,
       comments: 0,
